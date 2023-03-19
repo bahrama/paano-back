@@ -19,7 +19,7 @@ public class Passage {
     @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @SequenceGenerator(name = "passage_seq", sequenceName = "passage_seq")
     @Column(name="ID")
-    private long id;
+    private Long id;
 
     @Column(name = "name" , length = 100  , nullable = false)
     private String name;

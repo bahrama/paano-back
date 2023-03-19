@@ -19,7 +19,7 @@ public class UserDetail {
     @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @SequenceGenerator(name = "user_detail_seq", sequenceName = "user_detail_seq")
     @Column(name="ID")
-    private long id;
+    private Long id;
     @Column(name = "name" , length = 100  , nullable = false)
     private String name;
     @Column(name = "ssn" , length = 10 , unique = true , nullable = false)

@@ -23,7 +23,7 @@ public class Product {
     @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @SequenceGenerator(name = "product_seq", sequenceName = "product_seq")
     @Column(name="ID")
-    private long id;
+    private Long id;
 
     @Column(name = "brand" , length = 100)
     private String brand;
