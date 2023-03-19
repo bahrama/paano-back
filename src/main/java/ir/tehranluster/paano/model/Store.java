@@ -21,7 +21,7 @@ public class Store {
     @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @SequenceGenerator(name = "store_seq", sequenceName = "store_seq")
     @Column(name="ID")
-    private long id;
+    private Long id;
 
     @Column(name = "name_per" , length = 100)
     private String namePer;

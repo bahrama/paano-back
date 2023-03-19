@@ -19,7 +19,7 @@ public class Order {
     @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @SequenceGenerator(name = "order_seq", sequenceName = "order_seq")
     @Column(name="ID")
-    private long id;
+    private Long id;
 
     @Column(name="product_number")
     private int productNumber;

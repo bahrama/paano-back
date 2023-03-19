@@ -21,7 +21,7 @@ public class Slider {
     @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @SequenceGenerator(name = "slider_seq", sequenceName = "slider_seq")
     @Column(name="ID")
-    private long id;
+    private Long id;
 
     @Column(name = "name" , length = 100)
     private String name;

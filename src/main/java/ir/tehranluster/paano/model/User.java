@@ -23,7 +23,7 @@ public class User {
     @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @SequenceGenerator(name = "user_seq", sequenceName = "user_seq")
     @Column(name="ID")
-    private long id;
+    private Long id;
     @Column(name = "mobile" , length = 11 , unique = true , nullable = false)
     private String mobile;
     @Column(name = "PASSWORD" , length = 200 , nullable = false)

@@ -19,7 +19,7 @@ public class Addres {
     @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @SequenceGenerator(name = "addres_seq", sequenceName = "addres_seq")
     @Column(name="ID")
-    private long id;
+    private Long id;
 
     @Column(name = "phone" , length = 100)
     private String phone;
