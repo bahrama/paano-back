@@ -16,8 +16,8 @@ import javax.persistence.*;
 public class Passage {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "passage_seq", sequenceName = "passage_seq")
+    @GeneratedValue(strategy= GenerationType.SEQUENCE , generator = "passage_seq")
+    @SequenceGenerator(name = "passage_seq", sequenceName = "passage_seq", allocationSize = 1)
     @Column(name="ID")
     private Long id;
 

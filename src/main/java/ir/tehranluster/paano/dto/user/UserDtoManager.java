@@ -13,20 +13,41 @@ import org.mapstruct.factory.Mappers;
 )
 public interface UserDtoManager {
 
-    UserDtoManager Instance = Mappers.getMapper(UserDtoManager.class);
-    @Mapping(source = "name" , target = "name")
-    UserDetailDto transferUserDetailToDto(UserDetail userDetail);
+    @Mapping(source = "user.id" , target = "userId")
+    @Mapping(source = "user.mobile" , target = "mobile")
+    @Mapping(source = "user.password" , target = "password")
+    @Mapping(source = "user.createDate" , target = "createDate")
+    @Mapping(source = "user.updateDate" , target = "updateDate")
+    @Mapping(source = "userDetail.id" , target = "userDetailId")
+    @Mapping(source = "userDetail.name" , target = "name")
+    @Mapping(source = "userDetail.ssn" , target = "ssn")
+    @Mapping(source = "addres.id" , target = "addresId")
+    @Mapping(source = "addres.phone" , target = "phone")
+    @Mapping(source = "addres.addr" , target = "addr")
+    @Mapping(source = "addres.lat" , target = "lat")
+    @Mapping(source = "addres.lng" , target = "lng")
+    UserDto transferUserToDto(User user, UserDetail userDetail, Addres addres);
 
-    @InheritInverseConfiguration
-    UserDetail transferUserDetailDtoToEntity(UserDetailDto userDetailDto);
-
-    UserDto transferUserToDto(User user);
-
-    @InheritInverseConfiguration
+    @Mapping(source = "userId" , target = "id")
+    @Mapping(source = "mobile" , target = "mobile")
+    @Mapping(source = "password" , target = "password")
+    @Mapping(source = "createDate" , target = "createDate")
+    @Mapping(source = "updateDate" , target = "updateDate")
     User transferUserDtoToEntity(UserDto userDto);
 
-    AddresDto transferAddresToDto(Addres addres);
-    @InheritInverseConfiguration
-    Addres transferAddresDtoToEntity(AddresDto addresDto);
+    @Mapping(source = "userDetailId" , target = "id")
+    @Mapping(source = "name" , target = "name")
+    @Mapping(source = "ssn" , target = "ssn")
+    @Mapping(source = "addresId" , target = "addres.id")
+    @Mapping(source = "userId" , target = "user.id")
+    UserDetail transferUserDetailDtoToEntity(UserDto userDto);
+
+    @Mapping(source = "addresId" , target = "id")
+    @Mapping(source = "addr" , target = "addr")
+    @Mapping(source = "phone" , target = "phone")
+    @Mapping(source = "lat" , target = "lat")
+    @Mapping(source = "lng" , target = "lng")
+    Addres transferAddresDtoToEntity(UserDto userDto);
+
 
 }

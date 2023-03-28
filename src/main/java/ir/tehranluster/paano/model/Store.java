@@ -18,8 +18,8 @@ import java.util.Set;
 public class Store {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "store_seq", sequenceName = "store_seq")
+    @GeneratedValue(strategy= GenerationType.SEQUENCE , generator = "store_seq")
+    @SequenceGenerator(name = "store_seq", sequenceName = "store_seq", allocationSize = 1)
     @Column(name="ID")
     private Long id;
 
