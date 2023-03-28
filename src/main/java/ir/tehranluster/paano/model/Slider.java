@@ -18,8 +18,8 @@ import java.util.Set;
 public class Slider {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "slider_seq", sequenceName = "slider_seq")
+    @GeneratedValue(strategy= GenerationType.SEQUENCE , generator = "slider_seq")
+    @SequenceGenerator(name = "slider_seq", sequenceName = "slider_seq", allocationSize = 1)
     @Column(name="ID")
     private Long id;
 

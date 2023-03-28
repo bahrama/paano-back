@@ -1,4 +1,4 @@
-package ir.tehranluster.paano.dto.user;
+package ir.tehranluster.paano.dto.addres;
 
 import lombok.Getter;
 import lombok.Setter;
