@@ -74,6 +74,7 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody UserDto userDto, BindingResult result){
+       System.out.println("SUCCEEEEEEEEEEEEEESSSSSSS");
         ResponseEntity<?> errorMap = mapValidationErrorService.mapValidationService(result);
         if(errorMap != null) return errorMap;
 
