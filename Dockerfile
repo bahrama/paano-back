@@ -4,4 +4,4 @@ LABEL Description = "paano back image"
 
 RUN apt-get update
 
-ENTRYPOINT["/home/app/entrypoint.sh"]
+ENTRYPOINT ["/home/app/entrypoint.sh"]
